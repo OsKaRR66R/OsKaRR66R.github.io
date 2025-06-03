@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Галерея – Князев Илья</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О себе</a></li>
+        <li><a href="skills.html">Навыки</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+<section class="gallery-section">
+  <h2 data-aos="fade-up">Галерея</h2>
+  <div class="gallery-grid">
+    <img src="https://sun9-9.userapi.com/impg/H8H5SFPFvKcthD6yLgBcHE5C-ZVY9HV2SM32SA/jxP9_WbbFu0.jpg?size=1000x1500&quality=95&sign=fc11720886d6fde00125dc971df9c589&type=album" alt="Фото 1" onclick="showModal(this.src)" />
+    <img src="https://i.postimg.cc/s252r96Z/3.jpg" alt="Фото 2" onclick="showModal(this.src)" />
+    <img src="https://sun9-69.userapi.com/impg/4tect8Zs1FsE-rB0OBYdeRp1Jq_P8FYYPRqf1A/I67N5Mwy8D0.jpg?size=1620x2160&quality=95&sign=5a34ddd81343ba7312d2d53268443442&type=album" alt="Фото 3" onclick="showModal(this.src)" />
+    <img src="https://i.postimg.cc/PJTpcFdx/4.jpg" alt="Фото 4" onclick="showModal(this.src)" />
+    <img src="https://i.postimg.cc/wBzphK27/2.jpg" alt="Фото 5" onclick="showModal(this.src)" />
+    <img src="https://i.postimg.cc/RhHsshV9/5.jpgg" alt="Фото 6" onclick="showModal(this.src)" />
+  </div>
+</section>
+
+    <!-- Lightbox -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <img id="modalImg" class="modal-content" alt="Полноразмерное фото">
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Князев Илья
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <script>
+    function showModal(src) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImg");
+      modal.style.display = "block";
+      modalImg.src = src;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
